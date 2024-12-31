@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <button onclick="openAddBookForm()">Add Book</button>
+    <div id="bookForm" class="form-container">
+        <h2 id="formTitle"></h2>
+        <input type="hidden" id="bookId">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <input type="text" id="published_year" placeholder="Published Year" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <button id="saveBookBtn" onclick="saveBook()">Save</button>
+        <button onclick="closeForm()">Cancel</button>
+    </div>
+    <table id="booksTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Published Year</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Books will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
